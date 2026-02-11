@@ -278,7 +278,7 @@ const SolutionSection = () => (
 
     {/* CTA Button */}
     <a
-      href="https://docs.google.com/forms/d/15sRWMinGQo9-B0R8zRij2Y8sBUFhXUdEtao1_6OAWzo/edit?usp=drive_web&ouid=108814213545363570307"
+      href="https://forms.gle/4fGNu1ydgJbv4VvX9"
       target="_blank"
       rel="noopener noreferrer"
       className="w-full max-w-[282px] h-[52px] bg-[#0068FF] rounded-lg flex items-center justify-center shadow-md hover:bg-blue-700 transition-colors mx-4"
