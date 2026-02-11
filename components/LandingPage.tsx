@@ -208,8 +208,13 @@ const ProblemSection = () => (
   </div>
 );
 
-const SolutionSection = () => (
-  <div className="flex flex-col items-center gap-9 w-full max-w-lg text-center">
+const SolutionSection = () => {
+  const handleProjectApplyClick = () => {
+    window.fbq?.("track", "Purchase", { value: 10000, currency: "KRW" });
+  };
+
+  return (
+    <div className="flex flex-col items-center gap-9 w-full max-w-lg text-center">
     {/* Problem Highlight */}
     <div className="flex flex-col gap-2 w-full">
       <p className="font-light text-xs text-black">
@@ -276,17 +281,19 @@ const SolutionSection = () => (
       <p className="font-bold">출판 투고에 적합한 출판사를 추천해 드립니다!</p>
     </div>
 
-    {/* CTA Button */}
-    <a
-      href="https://forms.gle/4fGNu1ydgJbv4VvX9"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-full max-w-[282px] h-[52px] bg-[#0068FF] rounded-lg flex items-center justify-center shadow-md hover:bg-blue-700 transition-colors mx-4"
-    >
-      <span className="font-bold text-base text-white">프로젝트 신청하기</span>
-    </a>
-  </div>
-);
+      {/* CTA Button */}
+      <a
+        href="https://forms.gle/4fGNu1ydgJbv4VvX9"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={handleProjectApplyClick}
+        className="w-full max-w-[282px] h-[52px] bg-[#0068FF] rounded-lg flex items-center justify-center shadow-md hover:bg-blue-700 transition-colors mx-4"
+      >
+        <span className="font-bold text-base text-white">프로젝트 신청하기</span>
+      </a>
+    </div>
+  );
+};
 
 const FAQSection = () => (
   <div className="flex flex-col items-start gap-5 w-full max-w-lg px-4 sm:px-0">
